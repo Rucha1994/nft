@@ -26,7 +26,7 @@ function draw()
     line(width/2-20,300,width/2-20,350);
     line(width/2-20,350,width/2+20,leg_right_y);
     line(width/2-20,350,width/2-60,leg_left_y);
-    
+    tapScreen()
     
 }
 function mouseClicked()
@@ -44,4 +44,25 @@ function mouseClicked()
     left_y=ArrLY[index_l];
     leg_right_y=arrLRY[index_lr];
     leg_left_y=arrLLY[index_ll];
+}
+function tapScreen()
+{
+    if(touches.length>0)
+    {
+        strokeWeight(5);
+    ArrRY=[300,325,275]
+    ArrLY=[300,325,275]
+    arrLRY=[325,350,375]
+    arrLLY=[325,350,375]
+     var index_r=Math.round(random(0,2))
+     var index_l=Math.round(random(0,2))
+     var index_lr=Math.round(random(0,2))
+     var index_ll=Math.round(random(0,2))
+    right_y=ArrRY[index_r];
+    left_y=ArrLY[index_l];
+    leg_right_y=arrLRY[index_lr];
+    leg_left_y=arrLLY[index_ll];
+    touches=[]
+    }
+
 }
